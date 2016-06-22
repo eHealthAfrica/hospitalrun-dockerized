@@ -24,6 +24,7 @@ RUN cp server/config-example.js server/config.js
 
 RUN apt-get update
 RUN apt-get install curl
+RUN apt-get clean
 
 EXPOSE 4200
 CMD ./script/initcouch.sh && ember serve
